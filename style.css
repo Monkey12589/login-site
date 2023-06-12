@@ -1,0 +1,143 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(225, 0, 255, 0.1);
+  }
+::-webkit-scrollbar-thumb {
+    background: rgba(255,0,255,0.05);
+    border-radius: 20px;
+    box-shadow: 0 0 5px black;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,0,255,0.1);
+  }
+*, html, body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+    min-width: 800px;
+    min-height: 900px;
+	
+	-webkit-user-select: none;
+	-ms-user-select: none; 
+	user-select: none; 
+}
+
+body { 
+	background: black;
+	display: grid;
+	height: 100vh;
+	place-items: center; 
+}
+
+body::before {
+	animation: anim 30s infinite;
+	background: black;
+	border-radius: 30% 70% 53% 47% / 26% 46% 54% 74%;
+	box-shadow: 0 -2vmin 4vmin black inset, 0 1vmin 4vmin black inset,
+		0 -2vmin 7vmin black inset;
+	content: "";
+	filter: drop-shadow(0 0 3vmin rgb(221, 0, 221)) drop-shadow(0 5vmin 4vmin black)
+		drop-shadow(2vmin -2vmin 15vmin black)
+		drop-shadow(0 0 7vmin black);
+	height: 50vmin;
+	width: 50vmin;
+}
+
+@keyframes anim {
+	0%,
+	100% {
+		border-radius: 30% 70% 70% 30% / 30% 52% 48% 70%;
+		box-shadow: 0 -2vmin 4vmin purple inset, 0 -4vmin 4vmin purple inset,
+			0 -2vmin 7vmin purple inset;
+	}
+
+	10% {
+		border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+	}
+
+	20% {
+		border-radius: 67% 33% 47% 53% / 37% 20% 80% 63%;
+	}
+
+	30% {
+		border-radius: 39% 61% 47% 53% / 37% 40% 60% 63%;
+		box-shadow: 0 -4vmin 8vmin purple inset, -1vmin -2vmin 6vmin purple inset,
+			-1vmin -2vmin 4vmin black inset, 1vmin 4vmin 8vmin purple inset;
+	}
+
+	40% {
+		border-radius: 39% 61% 82% 18% / 74% 40% 60% 26%;
+	}
+
+	50% {
+		border-radius: 100%;
+		box-shadow: 0 4vmin 16vmin black inset, 0 2vmin 5vmin black inset, 0 4vmin 4vmin purple inset,
+			0 6vmin 8vmin purple inset;
+	}
+
+	60% {
+		border-radius: 50% 50% 53% 47% / 72% 69% 31% 28%;
+	}
+
+	70% {
+		border-radius: 50% 50% 53% 47% / 26% 22% 78% 74%;
+		box-shadow: 1vmin 1vmin 8vmin black inset,
+			2vmin -1vmin 4vmin black inset, -1vmin -1vmin 16vmin purple inset;
+	}
+
+	80% {
+		border-radius: 50% 50% 53% 47% / 26% 69% 31% 74%;
+	}
+
+	90% {
+		border-radius: 20% 80% 20% 80% / 20% 80% 20% 80%;
+	}
+}
+
+.con{
+    position: absolute;
+    background-color: rgba(20,0,20,0.8);
+    border: 1px solid purple;
+    border-radius: 50px;
+    width: 600px;
+    height: 800px;
+    filter: blur(5px) brightness(0.5);
+
+}
+.center{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 6%;
+
+}
+h2{
+    
+    color: rgb(20, 0, 20);
+    font-size: 50px;
+    filter: none;
+}
+.text{
+    position: absolute;
+    text-shadow: 0 0 10px purple;
+    margin-top:-20% ;
+    
+}
+.text input{
+    background-color: black;
+    border-radius: 5px;
+    border: 0.1px solid purple;
+    box-shadow: 0 0 10px purple;
+    margin-top: 20px;
+    height: 25px;
+    width: 300px;
+	color: white;
+}
+input:focus{
+	box-shadow: 0 0 25px white;
+}
