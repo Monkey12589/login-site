@@ -137,7 +137,27 @@ h2{
     height: 25px;
     width: 300px;
 	color: white;
+	padding: 10px;
+}
+.text h2{
+	margin-left: 30%;
 }
 input:focus{
 	box-shadow: 0 0 25px white;
+}
+.submit{
+	position: absolute;
+	margin-top: 100%;
+	margin-left: 30%;
+}
+
+.submit input{
+	position: absolute;
+	width: 100px;
+	height: 44px;
+	font-size: 20px;
+}
+.submit input:hover{
+	background-color: rgba(255,0,255,0.2);
+	box-shadow: 0 0 25px purple;
 }
